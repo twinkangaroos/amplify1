@@ -1,0 +1,32 @@
+{
+/*
+//■How to create an application with protected routes using the Authenticator component | Amplify UI for React
+//https://ui.docs.amplify.aws/react/guides/auth-protected
+
+function App() {
+  return (
+    <Authenticator.Provider>
+      <MyRoutes />
+    </Authenticator.Provider>
+  );
+}
+*/
+}
+
+
+
+/*
+    <Authenticator>
+      {({ signOut, user }) => (
+        <main>
+          <h1>Hello {user.username}</h1>
+          <button onClick={signOut}>Sign out</button>
+        </main>
+      )}
+    </Authenticator>
+
+    <Route path="/debug" element={<DebugPage />} />
+    <Route path="/nickname" element={<NicknamePage />} />
+
+
+*/

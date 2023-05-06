@@ -1,0 +1,155 @@
+{/*
+
+            <Flex>
+                <Button variation="primary" onClick={() => window.location.href = '/user_edit'}>ユーザー情報を編集</Button>
+            </Flex>
+            
+            <Flex>
+                <Button variation="" onClick={signOut}>ログアウト</Button>
+            </Flex>
+
+<Card variation="elevated">
+
+<Flex alignItems="flex-start">
+
+<Badge variation="success">Username</Badge>
+                    <Text fontSize="large" fontWeight="semibold">
+                        {user.username}
+                    </Text>
+<Badge variation="success">Birthdate</Badge>
+                    <Text fontSize="large" fontWeight="semibold">
+                        {user.attributes.birthdate}
+                    </Text>
+*/}
+
+            {/*
+            <li>middle_name:{user.middle_name}</li>
+            <li>preferred_username:{user.preferred_username}</li>
+            <li>profile:{user.profile}</li>
+            <li>website:{user.website}</li>
+            */}
+
+{
+    /*
+        <main>
+            <h1>Hello</h1>
+
+            <li>username:{user.username}</li>
+            
+            <li>birthdate:{user.attributes.birthdate}</li>
+            <li>email:{user.attributes.email}</li>
+
+            <li>family_name:{user.attributes.family_name}</li>
+            <li>given_name:{user.attributes.given_name}</li>
+            
+            <li>name:{user.attributes.name}</li>
+            
+            <li>nickname:{user.attributes.nickname}</li>
+            <li>phone_number:{user.phone_number}</li>
+            
+            <button onClick={signOut}>Sign out</button>
+            <p>
+                <Link to="/user_edit">ユーザー情報変更</Link>
+            </p>
+        </main>
+     */
+}
+{/*
+<div data-amplify-authenticator="" data-variation="default">
+            <div data-amplify-container="">
+                <div data-amplify-router="">
+                    <div dir="ltr" data-orientation="horizontal">
+                        <div data-state="active" data-orientation="horizontal" role="tabpanel" aria-labelledby="radix-:r0:-trigger-0" id="radix-:r0:-content-0" tabIndex="0">
+                            <div data-amplify-router-content="">
+                                <div>
+                                    <form data-amplify-form="" data-amplify-authenticator-signin="" method="post">
+                                        <div className="amplify-flex">
+                                            <fieldset class="amplify-flex" >
+                                                <span class="amplify-visually-hidden"><legend>xxxxx</legend></span>
+
+                                                <div class="amplify-flex amplify-field amplify-textfield amplify-passwordfield">
+                                                    <label class="amplify-label" for="amplify-id-:r7:">birthdate</label>
+                                                    <div class="amplify-flex amplify-field-group amplify-field-group--horizontal" data-orientation="horizontal">
+                                                        <div class="amplify-field-group__field-wrapper amplify-field-group__field-wrapper--horizontal" data-orientation="horizontal">
+                                                            {user.attributes.birthdate}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="amplify-flex amplify-field amplify-textfield amplify-passwordfield">
+                                                    <label class="amplify-label" for="amplify-id-:r7:">email</label>
+                                                    <div class="amplify-flex amplify-field-group amplify-field-group--horizontal" data-orientation="horizontal">
+                                                        <div class="amplify-field-group__field-wrapper amplify-field-group__field-wrapper--horizontal" data-orientation="horizontal">
+                                                            {user.attributes.email}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <li>family_name:{user.attributes.family_name}</li>
+                                                <li>given_name:{user.attributes.given_name}</li>
+                                                <li>name:{user.attributes.name}</li>
+                                                <li>nickname:{user.attributes.nickname}</li>
+                                                <li>phone_number:{user.phone_number}</li>
+                                                <button onClick={signOut}>Sign out</button>
+                                                <p><Link to="/user_edit">ユーザー情報変更</Link></p>
+                                            </fieldset>
+
+
+
+                                            
+
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+*/}
+
+{
+/*
+<Card variation="elevated">
+  <Flex alignItems="flex-start">
+    <Flex direction="column" gap="xs">
+      <Flex>
+        <Badge variation="success">Username</Badge>
+      </Flex>
+      <Text fontSize="large" fontWeight="semibold">
+        Twin kangaroos
+      </Text>
+      
+      <Flex>
+        <Badge variation="success">Username</Badge>
+      </Flex>
+      <Text fontSize="large" fontWeight="semibold">
+        Twin kangaroos
+      </Text>
+      
+      <Flex>
+        <Button variation="primary">ユーザー情報を変更する</Button>
+      </Flex>
+    </Flex>
+  </Flex>
+</Card>
+*/
+}
+
+ {/*
+<Flex>
+    <Button variation="primary">ユーザー情報変更画面へ</Button>
+</Flex>
+*/}
+
+{
+/*
+<Link href="/user_edit" color="#007EB9">
+    ユーザー情報変更画面へ
+</Link>
+*/
+}

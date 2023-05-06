@@ -1,0 +1,64 @@
+[data-amplify-authenticator] {
+    /* https://ui.docs.amplify.aws/react/components/button */
+    /* ログインボタン：初期 */
+    --amplify-components-button-primary-background-color: green;
+    /* ログインボタン：マウスオーバー */
+    --amplify-components-button-primary-hover-background-color: sandybrown;
+    
+    /* https://ui.docs.amplify.aws/react/connected-components/authenticator/customization */
+    /*
+    --amplify-colors-background-primary: var(--amplify-colors-neutral-90);
+    --amplify-colors-background-secondary: var(--amplify-colors-neutral-100);
+    --amplify-colors-brand-primary-10: var(--amplify-colors-teal-100);
+    --amplify-colors-brand-primary-80: var(--amplify-colors-teal-40);
+    --amplify-colors-brand-primary-90: var(--amplify-colors-teal-20);
+    --amplify-colors-brand-primary-100: var(--amplify-colors-teal-10);
+    --amplify-colors-font-interactive: var(--amplify-colors-white);
+    --amplify-components-tabs-item-active-color: var(--amplify-colors-white);
+    --amplify-components-tabs-item-focus-color: var(--amplify-colors-white);
+    --amplify-components-tabs-item-hover-color: var(--amplify-colors-orange);
+    */
+}
+
+/*
+.amplify-tabs {
+    display: none;
+}
+body {
+    margin: 0px;
+}
+*/
+/* chocolate */
+/*
+[data-amplify-authenticator] {
+    --amplify-components-button-primary-background-color: black;
+    --amplify-components-button-primary-active-background-color: black;
+    --amplify-components-button-primary-visited-background-color: black;
+    --amplify-components-button-primary-focus-background-color: black;
+    --amplify-components-button-primary-hover-background-color: sandybrown;
+    --amplify-components-button-link-color: black;
+    --amplify-components-button-link-hover-color: black;
+    --amplify-components-button-link-focus-color: black;
+    --amplify-components-button-link-active-color: peachpuff;
+    --amplify-components-button-link-hover-background-color: peachpuff;
+    --amplify-components-button-link-active-background-color: sandybrown;
+}
+
+.auth-screen {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.auth-form {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-logo {
+    width: 100%;
+}
+*/
