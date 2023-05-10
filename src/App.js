@@ -6,7 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import Layout from "./pages/Layout";
 import UserEdit from "./pages/UserEdit";
 import User from "./pages/User";
-import TopPage from "./pages/TopPage";
+import MyPage from "./pages/MyPage";
 import Download from "./pages/Download";
 import { Authenticator, translations } from '@aws-amplify/ui-react';
 //import { RequireAuth } from './RequireAuth';
@@ -49,7 +49,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />} >  
-            <Route path="/" element={<TopPage />} />
+            <Route path="/" element={<MyPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/user" element={<User />} />
             <Route path="/user_edit" element={<UserEdit />} />

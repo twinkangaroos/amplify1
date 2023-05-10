@@ -1,9 +1,6 @@
-import { useAuthenticator } from '@aws-amplify/ui-react';
-import { Card, Image, View, Heading, Flex, Badge, Text, Button, useTheme} from '@aws-amplify/ui-react';
-import { Tabs, TabItem, Link } from '@aws-amplify/ui-react';
+import { View, Heading, Flex, Link } from '@aws-amplify/ui-react';
 
 const Home = () => {
-    const { user, signOut } = useAuthenticator((context) => [context.user]);
     
     return (
         <>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
-import { useAuthenticator, Button, Heading, View } from '@aws-amplify/ui-react';
+import { Outlet } from 'react-router-dom';
+import { useAuthenticator, Heading, View } from '@aws-amplify/ui-react';
 import { Menu, MenuItem, Divider } from '@aws-amplify/ui-react';
 import { Flex, Link, Badge } from '@aws-amplify/ui-react';
 
@@ -9,13 +9,7 @@ const Layout = () => {
     context.route,
     context.signOut,
   ]);
-  const navigate = useNavigate();
-
-  function logOut() {
-    signOut();
-    navigate('/');
-  }
-
+  
   return (
     <>
       <Flex direction="column" gap="1rem" alignItems="center">
@@ -67,35 +61,3 @@ const Layout = () => {
 }
 
 export default Layout;
-
-{/*
-        <nav>
-          <Flex direction="column" alignItems="flex-end" gap="1rem">
-            {route !== 'authenticated' ? (
-                <>&nbsp;</>
-            ) : (
-                <Button onClick={() => logOut()}>ログアウト</Button>
-            )}
-          </Flex>
-        </nav>
-*/}
-/*
-
-
-            {route !== 'authenticated' ? (
-                <>&nbsp;</>
-            ) : (
-                <Button onClick={() => navigate('/mypage')}>マイページトップ</Button>
-            )}
-            
-
-<Button onClick={() => navigate('/mypage')}>ログイン</Button>
-                
-
-        <Button onClick={() => navigate('/protected')}>
-          First Protected Route
-        </Button>
-        <Button onClick={() => navigate('/protected2')}>
-          Second Protected Route
-        </Button>
-*/

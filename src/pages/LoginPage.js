@@ -1,6 +1,6 @@
-import { Authenticator } from '@aws-amplify/ui-react';
+import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
 import MyPage from "./MyPage";
-import { useTheme, View, Image, Text, Heading, useAuthenticator, Button } from '@aws-amplify/ui-react';
+import { useTheme, View, Text, Heading, Button } from '@aws-amplify/ui-react';
 
 
 

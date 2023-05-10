@@ -1,22 +1,15 @@
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { Card, Image, View, Heading, Flex, Badge, Text, Button, useTheme} from '@aws-amplify/ui-react';
+import { Heading, Flex } from '@aws-amplify/ui-react';
 import { Tabs, TabItem } from '@aws-amplify/ui-react';
 import Home from "./Home";
-import { useNavigate } from 'react-router-dom';
 
 const MyPage = () => {
-    //const { user, signOut } = useAuthenticator((context) => [
-    //    context.user
-    //]);
 
-    const { user, route, signOut } = useAuthenticator((context) => [
+    const { user, route } = useAuthenticator((context) => [
         context.user,
         context.route,
-        context.signOut,
     ]);
 
-    const navigate = useNavigate();
-    const { tokens } = useTheme();
     return (
         <>
             {

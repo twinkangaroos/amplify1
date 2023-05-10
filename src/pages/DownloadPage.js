@@ -1,18 +1,11 @@
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { Card, Image, View, Heading, Flex, Badge, Text, Button, useTheme} from '@aws-amplify/ui-react';
-import { Tabs, TabItem } from '@aws-amplify/ui-react';
-import { useNavigate } from 'react-router-dom';
+import { Heading, Flex } from '@aws-amplify/ui-react';
 import { useEffect } from "react";
 
 const DownloadPage = () => {
-    const { user, route, signOut } = useAuthenticator((context) => [
-        context.user,
+    const { route } = useAuthenticator((context) => [
         context.route,
-        context.signOut,
     ]);
-
-    const navigate = useNavigate();
-    const { tokens } = useTheme();
 
     useEffect(() => {
         const setDownloadHistoryData = () => {
