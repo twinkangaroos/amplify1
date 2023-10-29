@@ -8,6 +8,7 @@ import UserEdit from "./pages/UserEdit";
 import User from "./pages/User";
 import MyPage from "./pages/MyPage";
 import Download from "./pages/Download";
+
 import { Authenticator, translations } from '@aws-amplify/ui-react';
 //import { RequireAuth } from './RequireAuth';
 
