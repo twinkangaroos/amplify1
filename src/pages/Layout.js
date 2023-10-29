@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <>
       <Flex direction="column" gap="1rem" alignItems="center">
-        <Heading level={3}><Link href="/">Twin kangaroos</Link></Heading>
+        <Heading level={1}><Link href="/">Twin kangaroos</Link></Heading>
 
       </Flex>
       <Flex direction="column" gap="1rem" alignItems="flex-end">
