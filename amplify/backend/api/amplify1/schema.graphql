@@ -1,0 +1,13 @@
+type Blog @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  content: String!
+  image: String
+}
+
+type BlogKangaroos @model @auth(rules: [{allow: groups, groups: ["kangaroos"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  title: String!
+  content: String!
+}
+ 
