@@ -6,8 +6,8 @@
     "defaultAuthType": {
       "mode": "API_KEY",
       "expirationTime": 365,
-      "apiKeyExpirationDate": "2024-10-29T09:17:35.452Z",
-      "keyDescription": "da2-ykq5qqjlnng7lfbgbxvyvll2wu"
+      "apiKeyExpirationDate": "2024-11-01T04:02:39.792Z",
+      "keyDescription": "Add new API key."
     },
     "additionalAuthTypes": [
       {
