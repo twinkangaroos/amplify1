@@ -1,6 +1,48 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const createTestPost = /* GraphQL */ `
+  mutation CreateTestPost(
+    $input: CreateTestPostInput!
+    $condition: ModelTestPostConditionInput
+  ) {
+    createTestPost(input: $input, condition: $condition) {
+      id
+      title
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updateTestPost = /* GraphQL */ `
+  mutation UpdateTestPost(
+    $input: UpdateTestPostInput!
+    $condition: ModelTestPostConditionInput
+  ) {
+    updateTestPost(input: $input, condition: $condition) {
+      id
+      title
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deleteTestPost = /* GraphQL */ `
+  mutation DeleteTestPost(
+    $input: DeleteTestPostInput!
+    $condition: ModelTestPostConditionInput
+  ) {
+    deleteTestPost(input: $input, condition: $condition) {
+      id
+      title
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
 export const createBlog = /* GraphQL */ `
   mutation CreateBlog(
     $input: CreateBlogInput!
@@ -10,17 +52,12 @@ export const createBlog = /* GraphQL */ `
       id
       name
       posts {
-        items {
-          id
-          title
-          createdAt
-          updatedAt
-          blogPostsId
-        }
         nextToken
+        __typename
       }
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -33,17 +70,12 @@ export const updateBlog = /* GraphQL */ `
       id
       name
       posts {
-        items {
-          id
-          title
-          createdAt
-          updatedAt
-          blogPostsId
-        }
         nextToken
+        __typename
       }
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -56,17 +88,12 @@ export const deleteBlog = /* GraphQL */ `
       id
       name
       posts {
-        items {
-          id
-          title
-          createdAt
-          updatedAt
-          blogPostsId
-        }
         nextToken
+        __typename
       }
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -81,25 +108,18 @@ export const createPost = /* GraphQL */ `
       blog {
         id
         name
-        posts {
-          nextToken
-        }
         createdAt
         updatedAt
+        __typename
       }
       comments {
-        items {
-          id
-          content
-          createdAt
-          updatedAt
-          postCommentsId
-        }
         nextToken
+        __typename
       }
       createdAt
       updatedAt
       blogPostsId
+      __typename
     }
   }
 `;
@@ -114,25 +134,18 @@ export const updatePost = /* GraphQL */ `
       blog {
         id
         name
-        posts {
-          nextToken
-        }
         createdAt
         updatedAt
+        __typename
       }
       comments {
-        items {
-          id
-          content
-          createdAt
-          updatedAt
-          postCommentsId
-        }
         nextToken
+        __typename
       }
       createdAt
       updatedAt
       blogPostsId
+      __typename
     }
   }
 `;
@@ -147,25 +160,18 @@ export const deletePost = /* GraphQL */ `
       blog {
         id
         name
-        posts {
-          nextToken
-        }
         createdAt
         updatedAt
+        __typename
       }
       comments {
-        items {
-          id
-          content
-          createdAt
-          updatedAt
-          postCommentsId
-        }
         nextToken
+        __typename
       }
       createdAt
       updatedAt
       blogPostsId
+      __typename
     }
   }
 `;
@@ -179,23 +185,16 @@ export const createComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
         createdAt
         updatedAt
         blogPostsId
+        __typename
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      __typename
     }
   }
 `;
@@ -209,23 +208,16 @@ export const updateComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
         createdAt
         updatedAt
         blogPostsId
+        __typename
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      __typename
     }
   }
 `;
@@ -239,23 +231,16 @@ export const deleteComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
-        comments {
-          nextToken
-        }
         createdAt
         updatedAt
         blogPostsId
+        __typename
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      __typename
     }
   }
 `;

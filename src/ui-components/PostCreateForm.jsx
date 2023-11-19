@@ -9,8 +9,8 @@ import * as React from "react";
 import { Button, Flex, Grid, TextField } from "@aws-amplify/ui-react";
 import { fetchByPath, getOverrideProps, validateField } from "./utils";
 import { API } from "aws-amplify";
-import { createBlog } from "../graphql/mutations";
-export default function BlogCreateForm(props) {
+import { createPost } from "../graphql/mutations";
+export default function PostCreateForm(props) {
   const {
     clearOnSuccess = true,
     onSuccess,
@@ -22,16 +22,16 @@ export default function BlogCreateForm(props) {
     ...rest
   } = props;
   const initialValues = {
-    name: "",
+    title: "",
   };
-  const [name, setName] = React.useState(initialValues.name);
+  const [title, setTitle] = React.useState(initialValues.title);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
-    setName(initialValues.name);
+    setTitle(initialValues.title);
     setErrors({});
   };
   const validations = {
-    name: [{ type: "Required" }],
+    title: [{ type: "Required" }],
   };
   const runValidationTasks = async (
     fieldName,
@@ -59,7 +59,7 @@ export default function BlogCreateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
-          name,
+          title,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -90,7 +90,7 @@ export default function BlogCreateForm(props) {
             }
           });
           await API.graphql({
-            query: createBlog.replaceAll("__typename", ""),
+            query: createPost.replaceAll("__typename", ""),
             variables: {
               input: {
                 ...modelFields,
@@ -110,32 +110,32 @@ export default function BlogCreateForm(props) {
           }
         }
       }}
-      {...getOverrideProps(overrides, "BlogCreateForm")}
+      {...getOverrideProps(overrides, "PostCreateForm")}
       {...rest}
     >
       <TextField
-        label="Name"
+        label="Title"
         isRequired={true}
         isReadOnly={false}
-        value={name}
+        value={title}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              name: value,
+              title: value,
             };
             const result = onChange(modelFields);
-            value = result?.name ?? value;
+            value = result?.title ?? value;
           }
-          if (errors.name?.hasError) {
-            runValidationTasks("name", value);
+          if (errors.title?.hasError) {
+            runValidationTasks("title", value);
           }
-          setName(value);
+          setTitle(value);
         }}
-        onBlur={() => runValidationTasks("name", name)}
-        errorMessage={errors.name?.errorMessage}
-        hasError={errors.name?.hasError}
-        {...getOverrideProps(overrides, "name")}
+        onBlur={() => runValidationTasks("title", title)}
+        errorMessage={errors.title?.errorMessage}
+        hasError={errors.title?.hasError}
+        {...getOverrideProps(overrides, "title")}
       ></TextField>
       <Flex
         justifyContent="space-between"

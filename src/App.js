@@ -8,7 +8,8 @@ import UserEdit from "./pages/UserEdit";
 import User from "./pages/User";
 import MyPage from "./pages/MyPage";
 import Download from "./pages/Download";
-import Edy from "./pages/edy/Edy"
+import BlogList from "./pages/blog/bloglist"
+import TestPost from "./pages/TestPost"
 
 import { Authenticator, translations } from '@aws-amplify/ui-react';
 //import { RequireAuth } from './RequireAuth';
@@ -56,7 +57,8 @@ function App() {
             <Route path="/user" element={<User />} />
             <Route path="/user_edit" element={<UserEdit />} />
             <Route path="/download" element={<Download />} />
-            <Route path="/edy/edy" element={<Edy />} />
+            <Route path="/blog/bloglist" element={<BlogList />} />
+            <Route path="/TestPost" element={<TestPost />} />
           </Route>
         </Routes>
       </BrowserRouter>

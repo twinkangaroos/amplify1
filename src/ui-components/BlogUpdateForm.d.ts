@@ -6,35 +6,37 @@
 
 import * as React from "react";
 import { GridProps, TextFieldProps } from "@aws-amplify/ui-react";
-import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { Blog } from "../models";
+export declare type EscapeHatchProps = {
+    [elementHierarchy: string]: Record<string, unknown>;
+} | null;
+export declare type VariantValues = {
+    [key: string]: string;
+};
+export declare type Variant = {
+    variantValues: VariantValues;
+    overrides: EscapeHatchProps;
+};
 export declare type ValidationResponse = {
     hasError: boolean;
     errorMessage?: string;
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type BlogUpdateFormInputValues = {
-    title?: string;
-    content?: string;
-    image?: string;
+    name?: string;
 };
 export declare type BlogUpdateFormValidationValues = {
-    title?: ValidationFunction<string>;
-    content?: ValidationFunction<string>;
-    image?: ValidationFunction<string>;
+    name?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type BlogUpdateFormOverridesProps = {
     BlogUpdateFormGrid?: PrimitiveOverrideProps<GridProps>;
-    title?: PrimitiveOverrideProps<TextFieldProps>;
-    content?: PrimitiveOverrideProps<TextFieldProps>;
-    image?: PrimitiveOverrideProps<TextFieldProps>;
+    name?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;
 export declare type BlogUpdateFormProps = React.PropsWithChildren<{
     overrides?: BlogUpdateFormOverridesProps | undefined | null;
 } & {
     id?: string;
-    blog?: Blog;
+    blog?: any;
     onSubmit?: (fields: BlogUpdateFormInputValues) => BlogUpdateFormInputValues;
     onSuccess?: (fields: BlogUpdateFormInputValues) => void;
     onError?: (fields: BlogUpdateFormInputValues, errorMessage: string) => void;

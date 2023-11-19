@@ -21,25 +21,26 @@ export declare type ValidationResponse = {
     errorMessage?: string;
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
-export declare type BlogCreateFormInputValues = {
-    name?: string;
+export declare type TestPostUpdateFormInputValues = {
+    title?: string;
 };
-export declare type BlogCreateFormValidationValues = {
-    name?: ValidationFunction<string>;
+export declare type TestPostUpdateFormValidationValues = {
+    title?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type BlogCreateFormOverridesProps = {
-    BlogCreateFormGrid?: PrimitiveOverrideProps<GridProps>;
-    name?: PrimitiveOverrideProps<TextFieldProps>;
+export declare type TestPostUpdateFormOverridesProps = {
+    TestPostUpdateFormGrid?: PrimitiveOverrideProps<GridProps>;
+    title?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;
-export declare type BlogCreateFormProps = React.PropsWithChildren<{
-    overrides?: BlogCreateFormOverridesProps | undefined | null;
+export declare type TestPostUpdateFormProps = React.PropsWithChildren<{
+    overrides?: TestPostUpdateFormOverridesProps | undefined | null;
 } & {
-    clearOnSuccess?: boolean;
-    onSubmit?: (fields: BlogCreateFormInputValues) => BlogCreateFormInputValues;
-    onSuccess?: (fields: BlogCreateFormInputValues) => void;
-    onError?: (fields: BlogCreateFormInputValues, errorMessage: string) => void;
-    onChange?: (fields: BlogCreateFormInputValues) => BlogCreateFormInputValues;
-    onValidate?: BlogCreateFormValidationValues;
+    id?: string;
+    testPost?: any;
+    onSubmit?: (fields: TestPostUpdateFormInputValues) => TestPostUpdateFormInputValues;
+    onSuccess?: (fields: TestPostUpdateFormInputValues) => void;
+    onError?: (fields: TestPostUpdateFormInputValues, errorMessage: string) => void;
+    onChange?: (fields: TestPostUpdateFormInputValues) => TestPostUpdateFormInputValues;
+    onValidate?: TestPostUpdateFormValidationValues;
 } & React.CSSProperties>;
-export default function BlogCreateForm(props: BlogCreateFormProps): React.ReactElement;
+export default function TestPostUpdateForm(props: TestPostUpdateFormProps): React.ReactElement;

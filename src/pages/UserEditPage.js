@@ -5,7 +5,7 @@ import { Flex, Button, TextField, Heading, Link, Icon, Divider } from '@aws-ampl
 import { useNavigate } from "react-router-dom";
 
 const UserEditPage = () => {
-    const { user, signOut } = useAuthenticator((context) => [context.user]);
+    const { user } = useAuthenticator((context) => [context.user]);
     const [nickname, setNickname] = useState(user.attributes.nickname);
     const [email, setEmail] = useState(user.attributes.email);
     const navigate = useNavigate();
