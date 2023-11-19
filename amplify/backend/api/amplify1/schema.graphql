@@ -20,5 +20,4 @@ type Comment @model @auth(rules: [{allow: private}]) {
   id: ID!
   post: Post @belongsTo
   content: String!
-}
- 
+} 
