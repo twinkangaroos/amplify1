@@ -20,6 +20,7 @@ const TestPost = () => {
                 }
             }
         });
+        console.log("Create TestPost.")
 
         // List all items
         // const allTestPosts = await client.graphql({

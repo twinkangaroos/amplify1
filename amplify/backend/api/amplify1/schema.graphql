@@ -1,6 +1,5 @@
 type TestPost @model @auth(rules: [{allow: private}]) {
   id: ID!
-  title: String
 }
 
 type Blog @model @auth(rules: [{allow: private}]) {
@@ -20,4 +19,5 @@ type Comment @model @auth(rules: [{allow: private}]) {
   id: ID!
   post: Post @belongsTo
   content: String!
-} 
+}
+ 

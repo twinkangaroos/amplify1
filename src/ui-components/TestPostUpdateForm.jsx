@@ -6,7 +6,7 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { Button, Flex, Grid, TextField } from "@aws-amplify/ui-react";
+import { Button, Flex, Grid } from "@aws-amplify/ui-react";
 import { fetchByPath, getOverrideProps, validateField } from "./utils";
 import { API } from "aws-amplify";
 import { getTestPost } from "../graphql/queries";
@@ -23,16 +23,12 @@ export default function TestPostUpdateForm(props) {
     overrides,
     ...rest
   } = props;
-  const initialValues = {
-    title: "",
-  };
-  const [title, setTitle] = React.useState(initialValues.title);
+  const initialValues = {};
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     const cleanValues = testPostRecord
       ? { ...initialValues, ...testPostRecord }
       : initialValues;
-    setTitle(cleanValues.title);
     setErrors({});
   };
   const [testPostRecord, setTestPostRecord] = React.useState(testPostModelProp);
@@ -51,9 +47,7 @@ export default function TestPostUpdateForm(props) {
     queryData();
   }, [idProp, testPostModelProp]);
   React.useEffect(resetStateValues, [testPostRecord]);
-  const validations = {
-    title: [],
-  };
+  const validations = {};
   const runValidationTasks = async (
     fieldName,
     currentValue,
@@ -79,9 +73,7 @@ export default function TestPostUpdateForm(props) {
       padding="20px"
       onSubmit={async (event) => {
         event.preventDefault();
-        let modelFields = {
-          title: title ?? null,
-        };
+        let modelFields = {};
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
             if (Array.isArray(modelFields[fieldName])) {
@@ -132,30 +124,6 @@ export default function TestPostUpdateForm(props) {
       {...getOverrideProps(overrides, "TestPostUpdateForm")}
       {...rest}
     >
-      <TextField
-        label="Title"
-        isRequired={false}
-        isReadOnly={false}
-        value={title}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              title: value,
-            };
-            const result = onChange(modelFields);
-            value = result?.title ?? value;
-          }
-          if (errors.title?.hasError) {
-            runValidationTasks("title", value);
-          }
-          setTitle(value);
-        }}
-        onBlur={() => runValidationTasks("title", title)}
-        errorMessage={errors.title?.errorMessage}
-        hasError={errors.title?.hasError}
-        {...getOverrideProps(overrides, "title")}
-      ></TextField>
       <Flex
         justifyContent="space-between"
         {...getOverrideProps(overrides, "CTAFlex")}
